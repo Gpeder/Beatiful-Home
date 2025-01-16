@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:teste/rootPage.dart';
+import 'package:teste/telas/splash.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: false,
         visualDensity: VisualDensity.adaptivePlatformDensity
       ),
-      home: RootPage(),
+      home: Splash(),
     );
   }
 }

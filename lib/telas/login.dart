@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:teste/componentes/buttons.dart';
+import 'package:teste/rootPage.dart';
+import 'package:teste/telas/register.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -89,12 +91,16 @@ class Login extends StatelessWidget {
                     SizedBox(
                       height: 40,
                     ),
-                    Botao(texto: 'Login', width: double.infinity, onTap: () {}),
+                    Botao(texto: 'Login', width: double.infinity, onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => RootPage()));
+                    }),
                     SizedBox(
                       height: 20,
                     ),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => Register()));
+                        },
                         child: Text(
                           'SING UP',
                           style: TextStyle(
