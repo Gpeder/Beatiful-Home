@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:teste/componentes/buttons.dart';
+import 'package:teste/telas/profile.dart';
 
 class CustomSideBar extends StatelessWidget {
   const CustomSideBar({super.key});
@@ -14,7 +15,9 @@ class CustomSideBar extends StatelessWidget {
         children: [
           CustomUser(name: 'Beltrano', imageAvatar: 'https://images.unsplash.com/photo-1735287367310-2648443f086f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', email: 'dwdwdwd@gwfwfwf',),
           SizedBox(height: 20,),
-          MenuItens(title: 'Profile', icon: Icons.person, onTap: (){}),
+          MenuItens(title: 'Profile', icon: Icons.person, onTap: (){
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => Profile()));
+          }),
           SizedBox(height: 20,),
           MenuItens(title: 'Payments', icon: Icons.credit_card, onTap: (){}),
           SizedBox(height: 20,),

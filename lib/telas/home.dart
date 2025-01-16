@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:teste/componentes/navbar.dart';
+import 'package:teste/telas/cart.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -13,7 +14,9 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(CupertinoIcons.cart), color: Color(0xff808080)),
+          IconButton(onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => Cart()));
+          }, icon: Icon(CupertinoIcons.cart), color: Color(0xff808080)),
           SizedBox(width: 20),
           IconButton(onPressed: () {}, icon: Icon(CupertinoIcons.search), color: Color(0xff808080)),
           SizedBox(width: 10),

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:teste/rootPage.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -66,9 +67,14 @@ class CustomTitleBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Image(
-            image: AssetImage('images/logo.png'),
-            height: 40,
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => RootPage()));
+            },
+            child: Image(
+              image: AssetImage('images/logo.png'),
+              height: 40,
+            ),
           ),
           Text(
             'Profile',

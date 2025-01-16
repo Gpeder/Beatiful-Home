@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:teste/componentes/navbar.dart';
+import 'package:teste/telas/cart.dart';
 
 class Saved extends StatelessWidget {
   const Saved({super.key});
@@ -13,7 +14,10 @@ class Saved extends StatelessWidget {
         elevation: 0,
         actions: [
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => Cart()));
+
+              },
               icon: Icon(CupertinoIcons.cart),
               color: Color(0xff808080)),
           SizedBox(width: 20),
